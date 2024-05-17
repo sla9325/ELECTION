@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Result</title>
+</head>
+<body>
+    <h1 id="resultText"></h1>
+    <p>HA HA.....</p>
+    <footer>
+        <p>MADE BY SLA</p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.getElementById('resultText').textContent = `Hey ${name}, you know who is going to win (DICTATOR)`;
+        } else {
+            document.getElementById('resultText').textContent = "Invalid entry.";
+        }
+    </script>
+</body>
+</html>
